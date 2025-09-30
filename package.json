@@ -1,7 +1,7 @@
 {
-  "name": "tic-tac-toe-game",
+  "name": "mindfulness-cards-app",
   "version": "1.0.0",
-  "description": "A simple and interactive Tic Tac Toe game built with HTML, CSS, and JavaScript",
+  "description": "A mindful awareness cards app with categories, favorites, and swipe navigation",
   "main": "index.html",
   "scripts": {
     "start": "npx http-server . -p 8080 -o",
@@ -9,13 +9,14 @@
     "serve": "npx http-server . -p 8080"
   },
   "keywords": [
-    "tic-tac-toe",
-    "game",
-    "html",
-    "css",
+    "mindfulness",
+    "awareness",
+    "meditation",
+    "cards",
+    "wellness",
+    "mental-health",
     "javascript",
-    "interactive",
-    "web-game"
+    "pwa"
   ],
   "author": "",
   "license": "MIT",

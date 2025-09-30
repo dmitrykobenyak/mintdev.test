@@ -3,38 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe Game</title>
+    <title>Mindfulness Cards</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Tic Tac Toe</h1>
-        <div class="game-info">
-            <div class="status" id="status">Player X's turn</div>
-            <button class="reset-btn" id="resetBtn">Reset Game</button>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Mindfulness Cards</h1>
+            <p class="subtitle">Find your moment of awareness</p>
+        </header>
+
+        <nav class="category-nav">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="Think">Think</button>
+            <button class="category-btn" data-category="Do">Do</button>
+            <button class="category-btn" data-category="Feel">Feel</button>
+            <button class="category-btn" data-category="favorites">Favorites</button>
+        </nav>
+
+        <div class="controls">
+            <button class="random-btn" id="randomBtn">
+                <span class="btn-icon">🎲</span>
+                Draw Random Card
+            </button>
         </div>
-        <div class="game-board" id="gameBoard">
-            <div class="cell" data-index="0"></div>
-            <div class="cell" data-index="1"></div>
-            <div class="cell" data-index="2"></div>
-            <div class="cell" data-index="3"></div>
-            <div class="cell" data-index="4"></div>
-            <div class="cell" data-index="5"></div>
-            <div class="cell" data-index="6"></div>
-            <div class="cell" data-index="7"></div>
-            <div class="cell" data-index="8"></div>
+
+        <div class="card-container">
+            <div class="card-wrapper" id="cardWrapper">
+                <div class="card" id="currentCard">
+                    <div class="card-header">
+                        <span class="card-category" id="cardCategory">Think</span>
+                        <button class="favorite-btn" id="favoriteBtn">
+                            <span class="heart">♡</span>
+                        </button>
+                    </div>
+                    <h2 class="card-title" id="cardTitle">Welcome to Mindfulness</h2>
+                    <p class="card-description" id="cardDescription">
+                        Take a moment to breathe deeply and center yourself. This is your space for mindful awareness.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="score">
-            <div class="score-item">
-                <span>Player X:</span>
-                <span id="scoreX">0</span>
+
+        <div class="navigation">
+            <button class="nav-btn" id="prevBtn">
+                <span class="nav-icon">‹</span>
+                Previous
+            </button>
+            <div class="card-counter">
+                <span id="currentIndex">1</span> / <span id="totalCards">12</span>
             </div>
-            <div class="score-item">
-                <span>Player O:</span>
-                <span id="scoreO">0</span>
-            </div>
+            <button class="nav-btn" id="nextBtn">
+                Next
+                <span class="nav-icon">›</span>
+            </button>
+        </div>
+
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-icon">💭</div>
+            <h3>No cards found</h3>
+            <p>Try selecting a different category or add some favorites!</p>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
