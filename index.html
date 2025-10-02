@@ -5,26 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindfulness Cards</title>
     <link rel="stylesheet" href="style.css">
+    <script src="js/i18n.js"></script>
 </head>
 <body>
     <div class="app-container">
         <header class="app-header">
-            <h1>Mindfulness Cards</h1>
-            <p class="subtitle">Find your moment of awareness</p>
+            <div class="header-content">
+                <h1 data-i18n="app.title">Mindfulness Cards</h1>
+                <p class="subtitle" data-i18n="app.subtitle">Find your moment of awareness</p>
+            </div>
+            <button class="settings-btn" id="settingsBtn" aria-label="Settings">
+                <span class="settings-icon">⚙️</span>
+            </button>
         </header>
 
         <nav class="category-nav">
-            <button class="category-btn active" data-category="all">All</button>
-            <button class="category-btn" data-category="Think">Think</button>
-            <button class="category-btn" data-category="Do">Do</button>
-            <button class="category-btn" data-category="Feel">Feel</button>
-            <button class="category-btn" data-category="favorites">Favorites</button>
+            <button class="category-btn active" data-category="all" data-i18n="navigation.all">All</button>
+            <button class="category-btn" data-category="Think" data-i18n="navigation.think">Think</button>
+            <button class="category-btn" data-category="Do" data-i18n="navigation.do">Do</button>
+            <button class="category-btn" data-category="Feel" data-i18n="navigation.feel">Feel</button>
+            <button class="category-btn" data-category="favorites" data-i18n="navigation.favorites">Favorites</button>
         </nav>
 
         <div class="controls">
             <button class="random-btn" id="randomBtn">
                 <span class="btn-icon">🎲</span>
-                Draw Random Card
+                <span data-i18n="navigation.drawRandom">Draw Random Card</span>
             </button>
         </div>
 
@@ -48,21 +54,40 @@
         <div class="navigation">
             <button class="nav-btn" id="prevBtn">
                 <span class="nav-icon">‹</span>
-                Previous
+                <span data-i18n="navigation.previous">Previous</span>
             </button>
             <div class="card-counter">
-                <span id=\"currentIndex\">1</span> / <span id=\"totalCards\">100</span>
+                <span id="currentIndex">1</span> / <span id="totalCards">100</span>
             </div>
             <button class="nav-btn" id="nextBtn">
-                Next
+                <span data-i18n="navigation.next">Next</span>
                 <span class="nav-icon">›</span>
             </button>
         </div>
 
         <div class="empty-state" id="emptyState" style="display: none;">
             <div class="empty-icon">💭</div>
-            <h3>No cards found</h3>
-            <p>Try selecting a different category or add some favorites!</p>
+            <h3 data-i18n="ui.emptyState.title">No cards found</h3>
+            <p data-i18n="ui.emptyState.description">Try selecting a different category or add some favorites!</p>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settingsModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-i18n="ui.settings.title">Settings</h2>
+                <button class="modal-close" id="closeSettingsBtn" aria-label="Close">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <label for="languageSelect" data-i18n="ui.settings.language">Language</label>
+                    <select id="languageSelect" class="language-select">
+                        <option value="en">English</option>
+                        <option value="ru">Русский</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -1,146 +1,194 @@
-# Mindfulness Cards App
+# Mindfulness Cards App with i18n
 
-A beautiful, interactive mindfulness and awareness cards app built with vanilla HTML, CSS, and JavaScript. Features a clean, minimal design with soft colors and smooth animations to help users find moments of peace and awareness throughout their day.
+A mindful awareness cards app with internationalization support for English and Russian languages.
 
 ## Features
 
-- 🧘 **Mindfulness Cards**: 12 carefully crafted cards with titles, categories, and descriptions
-- 🏷️ **Category Filtering**: Filter cards by "Think", "Do", "Feel" categories or view all
-- 👆 **Swipe Navigation**: Swipe left/right on mobile or use arrow keys on desktop
-- 🎲 **Random Card**: Draw a random card for spontaneous mindfulness moments
-- ❤️ **Favorites System**: Save favorite cards and view them in a dedicated tab
-- 💾 **Local Storage**: Favorites are saved locally and persist between sessions
-- 📱 **Responsive Design**: Works beautifully on desktop, tablet, and mobile
-- ⌨️ **Keyboard Support**: Arrow keys for navigation, spacebar for random card, 'F' for favorites
-- 🎨 **Beautiful UI**: Soft color palette with teal, lavender, and white tones
+- 100 unique mindfulness cards across three categories (Think, Do, Feel)
+- Swipe navigation between cards
+- Random card selection
+- Favorites system with local storage
+- **Internationalization (i18n) support**
+- Language switching between English and Russian
+- Proper plural forms and formatting for Russian
+- Settings modal for language preferences
 
-## Card Categories
+## i18n Implementation
 
-### Think 💭
-Cards focused on mindful thinking, awareness, and mental observation practices.
+### Structure
 
-### Do 🤲
-Cards with actionable mindfulness exercises and physical awareness practices.
+The app uses a custom lightweight i18n library (`js/i18n.js`) with the following features:
 
-### Feel 💝
-Cards centered on emotional awareness, heart connection, and feeling-based practices.
+- **Translation files**: `locales/en.json` and `locales/ru.json`
+- **Automatic language detection** from browser settings
+- **Persistent language preferences** in localStorage
+- **Fallback to English** if translation is missing
+- **Dynamic language switching** without page reload
 
-## How to Use
+### Translation Files Structure
 
-1. **Browse Cards**: Use the navigation buttons or swipe left/right to browse through cards
-2. **Filter by Category**: Click on category tabs (Think, Do, Feel) to filter cards
-3. **Draw Random Card**: Click the "Draw Random Card" button for a surprise mindfulness moment
-4. **Save Favorites**: Click the heart icon to save cards you love
-5. **View Favorites**: Click the "Favorites" tab to see your saved cards
+```json
+{
+  "app": {
+    "title": "Mindfulness Cards",
+    "subtitle": "Find your moment of awareness"
+  },
+  "navigation": {
+    "all": "All",
+    "think": "Think",
+    "do": "Do",
+    "feel": "Feel",
+    "favorites": "Favorites",
+    "previous": "Previous",
+    "next": "Next",
+    "drawRandom": "Draw Random Card"
+  },
+  "ui": {
+    "currentIndex": "{{current}} / {{total}}",
+    "emptyState": {
+      "title": "No cards found",
+      "description": "Try selecting a different category or add some favorites!"
+    },
+    "settings": {
+      "title": "Settings",
+      "language": "Language",
+      "close": "Close"
+    }
+  },
+  "cards": {
+    "categories": {
+      "Think": "Think",
+      "Do": "Do",
+      "Feel": "Feel"
+    },
+    "content": {
+      "1": {
+        "title": "Mindful Breathing",
+        "description": "Take five deep breaths. Focus on the sensation of air entering and leaving your body..."
+      }
+      // ... 100 cards total
+    }
+  }
+}
+```
 
-## Controls
+### Usage Examples
 
-- **Touch/Mouse**: Swipe left/right or click navigation buttons
-- **Keyboard**: 
-  - Arrow keys (←/→) to navigate cards
-  - Spacebar to draw a random card
-  - 'F' key to toggle favorite status
-- **Buttons**: 
-  - Category tabs for filtering
-  - Heart icon to favorite/unfavorite cards
-  - "Draw Random Card" for random selection
+#### Basic Translation
+
+```javascript
+// Get translation for a key
+const title = window.t('app.title'); // "Mindfulness Cards" or "Карты Осознанности"
+
+// With parameters
+const counter = window.t('ui.currentIndex', { current: 1, total: 100 }); // "1 / 100" or "1 из 100"
+```
+
+#### HTML Integration
+
+```html
+<!-- Static text with data-i18n attribute -->
+<h1 data-i18n="app.title">Mindfulness Cards</h1>
+
+<!-- Dynamic content updated via JavaScript -->
+<span id="cardTitle"></span>
+```
+
+#### Language Switching
+
+```javascript
+// Change language programmatically
+await window.i18n.setLanguage('ru');
+
+// Listen for language changes
+window.addEventListener('languageChanged', (event) => {
+    console.log('Language changed to:', event.detail.language);
+});
+```
+
+### Russian Language Support
+
+The Russian translation includes:
+
+- **Proper grammar and terminology** for mindfulness concepts
+- **Cultural adaptation** of meditation and awareness practices
+- **Correct plural forms** (though simplified implementation)
+- **Localized number formatting** for counters
+
+### File Structure
+
+```
+├── locales/
+│   ├── en.json          # English translations
+│   └── ru.json          # Russian translations
+├── js/
+│   └── i18n.js          # i18n library
+├── index.html           # Main HTML with i18n attributes
+├── script.js            # App logic with i18n integration
+├── style.css            # Styles including settings modal
+└── README.md            # This file
+```
 
 ## Getting Started
 
-### Option 1: Open Directly
-Simply open `index.html` in your web browser.
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### Option 2: Using a Local Server (Recommended)
-For the best experience with all features:
+2. **Start development server**:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-# Install dependencies
-npm install
+3. **Open in browser**: The app will open at `http://localhost:8080`
 
-# Start the development server
-npm start
-```
+4. **Change language**: Click the settings gear icon (⚙️) in the top-right corner
 
-The app will open automatically in your browser at `http://localhost:8080`.
+## Language Settings
 
-### Option 3: Using Python
-```bash
-# Python 3
-python -m http.server 8080
+- **Default language**: English
+- **Available languages**: English, Russian
+- **Language detection**: Automatic based on browser settings
+- **Language persistence**: Saved in localStorage
+- **Manual switching**: Via settings modal
 
-# Python 2
-python -m SimpleHTTPServer 8080
-```
+## Technical Implementation
 
-Then open `http://localhost:8080` in your browser.
+### i18n Library Features
 
-## Technical Details
+- **Lightweight**: ~200 lines of vanilla JavaScript
+- **No dependencies**: Works without external libraries
+- **Async loading**: Translation files loaded on demand
+- **Nested keys**: Support for dot notation (`app.title`)
+- **Parameter interpolation**: `{{variable}}` syntax
+- **Fallback support**: Falls back to English if translation missing
+- **Event system**: Emits `languageChanged` events
 
-### Files Structure
-```
-├── index.html      # Main HTML structure
-├── style.css       # Styling with CSS custom properties
-├── script.js       # App logic and interactions
-├── package.json    # Project configuration
-└── README.md       # This file
-```
+### Integration Points
 
-### Technologies Used
-- **HTML5**: Semantic structure and accessibility
-- **CSS3**: Modern styling with custom properties, flexbox, animations
-- **JavaScript ES6+**: Classes, localStorage, touch events, modern DOM APIs
-- **LocalStorage**: For persisting favorite cards
+1. **HTML elements**: Use `data-i18n` attributes for static text
+2. **Dynamic content**: Update via JavaScript using `window.t()`
+3. **Settings UI**: Language selector in modal
+4. **Card content**: All 100 cards translated
+5. **Navigation**: All buttons and labels translated
 
-### Design System
-- **Colors**: Soft palette with teal (#4fd1c7), lavender (#b794f6), and white (#fefefe)
-- **Typography**: System fonts with large, readable text
-- **Layout**: Mobile-first responsive design
-- **Animations**: Smooth transitions and micro-interactions
+## Browser Support
 
-### Browser Compatibility
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-
-## Customization
-
-You can easily customize the app by modifying:
-
-- **Cards Content**: Edit the `cards` array in `script.js` to add/modify cards
-- **Colors**: Change CSS custom properties in `:root` selector in `style.css`
-- **Categories**: Add new categories by updating both the data and UI
-- **Animations**: Adjust animation durations and effects in CSS
-
-## Future Enhancements
-
-- 🔔 Daily reminder notifications
-- 🌙 Dark mode support
-- 📊 Usage statistics and insights
-- 🔄 Card sharing functionality
-- 🎵 Optional ambient sounds
-- 📱 Progressive Web App (PWA) features
+- Modern browsers with ES6+ support
+- localStorage for preferences
+- Fetch API for loading translations
+- CSS Grid and Flexbox for layout
 
 ## Contributing
 
-Feel free to fork this project and submit pull requests for any improvements:
+To add a new language:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Create `locales/{language-code}.json`
+2. Add language option to `getAvailableLanguages()`
+3. Update language selector in HTML
+4. Test all UI elements and card content
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Inspired by mindfulness and meditation practices
-- Designed with accessibility and user experience in mind
-- Built with modern web standards and best practices
-
----
-
-Find your moment of awareness. 🧘‍♀️✨
+MIT License - see LICENSE file for details.
