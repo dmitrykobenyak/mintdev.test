@@ -1,4 +1,4 @@
-// Mindfulness Cards App
+// Mindfulness Cards App with i18n support
 class MindfulnessCards {
     constructor() {
         // Expanded mindfulness cards data - 100 unique cards
@@ -620,7 +620,29 @@ class MindfulnessCards {
         this.touchEndX = 0;
         this.isSwipeEnabled = true;
         
-        this.init();
+        // Initialize i18n and then the app
+        this.initializeI18n();
+    }
+
+    async initializeI18n() {
+        try {
+            // Load the current language
+            await window.i18n.loadLanguage(window.i18n.getCurrentLanguage());
+            await window.i18n.setLanguage(window.i18n.getCurrentLanguage());
+            
+            // Initialize the app after i18n is ready
+            this.init();
+            
+            // Listen for language changes
+            window.addEventListener('languageChanged', () => {
+                this.updateTranslations();
+                this.updateDisplay();
+            });
+        } catch (error) {
+            console.error('Failed to initialize i18n:', error);
+            // Initialize app anyway with default language
+            this.init();
+        }
     }
 
     init() {
@@ -638,11 +660,18 @@ class MindfulnessCards {
         this.totalCardsSpan = document.getElementById('totalCards');
         this.emptyState = document.getElementById('emptyState');
         this.categoryBtns = document.querySelectorAll('.category-btn');
+        
+        // Settings elements
+        this.settingsBtn = document.getElementById('settingsBtn');
+        this.settingsModal = document.getElementById('settingsModal');
+        this.closeSettingsBtn = document.getElementById('closeSettingsBtn');
+        this.languageSelect = document.getElementById('languageSelect');
 
         // Add event listeners
         this.addEventListeners();
         
         // Initialize display
+        this.updateTranslations();
         this.updateDisplay();
         this.updateNavigation();
     }
@@ -671,6 +700,23 @@ class MindfulnessCards {
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => this.handleKeyPress(e));
+        
+        // Settings modal
+        this.settingsBtn.addEventListener('click', () => this.openSettings());
+        this.closeSettingsBtn.addEventListener('click', () => this.closeSettings());
+        this.settingsModal.addEventListener('click', (e) => {
+            if (e.target === this.settingsModal) {
+                this.closeSettings();
+            }
+        });
+        
+        // Language selection
+        this.languageSelect.addEventListener('change', (e) => {
+            this.changeLanguage(e.target.value);
+        });
+        
+        // Set current language in select
+        this.languageSelect.value = window.i18n.getCurrentLanguage();
     }
 
     filterByCategory(category) {
@@ -707,10 +753,16 @@ class MindfulnessCards {
 
         const card = this.filteredCards[this.currentIndex];
         
-        // Update card content
-        this.cardTitle.textContent = card.title;
-        this.cardDescription.textContent = card.description;
-        this.cardCategory.textContent = card.category;
+        // Update card content with translations
+        const cardTitle = window.t(`cards.content.${card.id}.title`);
+        const cardDescription = window.t(`cards.content.${card.id}.description`);
+        
+        this.cardTitle.textContent = cardTitle !== `cards.content.${card.id}.title` ? cardTitle : card.title;
+        this.cardDescription.textContent = cardDescription !== `cards.content.${card.id}.description` ? cardDescription : card.description;
+        
+        // Update category with translation
+        const categoryTranslation = window.t(`cards.categories.${card.category}`);
+        this.cardCategory.textContent = categoryTranslation !== `cards.categories.${card.category}` ? categoryTranslation : card.category;
         
         // Update category styling
         this.cardCategory.className = `card-category ${card.category.toLowerCase()}`;
@@ -731,16 +783,14 @@ class MindfulnessCards {
         if (this.filteredCards.length === 0) {
             this.prevBtn.disabled = true;
             this.nextBtn.disabled = true;
-            this.currentIndexSpan.textContent = '0';
-            this.totalCardsSpan.textContent = '0';
+            this.updateCardCounter();
             return;
         }
 
         this.prevBtn.disabled = this.currentIndex === 0;
         this.nextBtn.disabled = this.currentIndex === this.filteredCards.length - 1;
         
-        this.currentIndexSpan.textContent = this.currentIndex + 1;
-        this.totalCardsSpan.textContent = this.filteredCards.length;
+        this.updateCardCounter();
     }
 
     previousCard() {
@@ -863,6 +913,55 @@ class MindfulnessCards {
                 e.preventDefault();
                 this.toggleFavorite();
                 break;
+        }
+    }
+
+    // Settings methods
+    openSettings() {
+        this.settingsModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    closeSettings() {
+        this.settingsModal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    async changeLanguage(language) {
+        try {
+            await window.i18n.setLanguage(language);
+            this.languageSelect.value = language;
+        } catch (error) {
+            console.error('Failed to change language:', error);
+        }
+    }
+
+    // Translation methods
+    updateTranslations() {
+        // Update all elements with data-i18n attributes
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            element.textContent = window.t(key);
+        });
+        
+        // Update card counter format
+        this.updateCardCounter();
+    }
+
+    updateCardCounter() {
+        if (this.filteredCards.length === 0) {
+            this.currentIndexSpan.textContent = '0';
+            this.totalCardsSpan.textContent = '0';
+        } else {
+            // Use localized format for card counter
+            const current = this.currentIndex + 1;
+            const total = this.filteredCards.length;
+            
+            // For now, we'll use simple number formatting
+            // You could extend this to use the i18n number formatting
+            this.currentIndexSpan.textContent = current.toString();
+            this.totalCardsSpan.textContent = total.toString();
         }
     }
 

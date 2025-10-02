@@ -1,0 +1,437 @@
+{
+  "app": {
+    "title": "Mindfulness Cards",
+    "subtitle": "Find your moment of awareness"
+  },
+  "navigation": {
+    "all": "All",
+    "think": "Think",
+    "do": "Do", 
+    "feel": "Feel",
+    "favorites": "Favorites",
+    "previous": "Previous",
+    "next": "Next",
+    "drawRandom": "Draw Random Card"
+  },
+  "ui": {
+    "currentIndex": "{{current}} / {{total}}",
+    "emptyState": {
+      "title": "No cards found",
+      "description": "Try selecting a different category or add some favorites!"
+    },
+    "settings": {
+      "title": "Settings",
+      "language": "Language",
+      "close": "Close"
+    }
+  },
+  "cards": {
+    "categories": {
+      "Think": "Think",
+      "Do": "Do", 
+      "Feel": "Feel"
+    },
+    "content": {
+      "1": {
+        "title": "Mindful Breathing",
+        "description": "Take five deep breaths. Focus on the sensation of air entering and leaving your body. Let each breath anchor you to the present moment."
+      },
+      "2": {
+        "title": "Present Moment Awareness",
+        "description": "Ask yourself: What am I thinking right now? What am I feeling? What do I notice around me? Simply observe without changing anything."
+      },
+      "3": {
+        "title": "Thought Observation",
+        "description": "Imagine your thoughts as clouds passing through the sky of your mind. Watch them come and go without getting caught up in their stories."
+      },
+      "4": {
+        "title": "Inner Wisdom",
+        "description": "Ask yourself: 'What does my inner wisdom want me to know right now?' Listen quietly for any insights that arise from within."
+      },
+      "5": {
+        "title": "Mental Clarity",
+        "description": "Notice the quality of your thoughts right now. Are they rushed, calm, scattered, or focused? Simply observe without judgment."
+      },
+      "6": {
+        "title": "Perspective Shift",
+        "description": "Consider a current challenge from the viewpoint of your wisest, most compassionate self. What would that version of you say?"
+      },
+      "7": {
+        "title": "Mindful Questioning",
+        "description": "Ask yourself: 'What am I learning about myself in this moment?' Allow the answer to emerge naturally without forcing it."
+      },
+      "8": {
+        "title": "Acceptance Practice",
+        "description": "Notice something you've been resisting. Can you soften around it, even just a little? Practice saying 'this too' to whatever arises."
+      },
+      "9": {
+        "title": "Intention Setting",
+        "description": "Pause and ask: 'How do I want to show up in the next hour?' Set a gentle intention for how you want to be."
+      },
+      "10": {
+        "title": "Mental Space",
+        "description": "Imagine your mind as a vast, open sky. Notice how thoughts and feelings are just temporary weather patterns passing through."
+      },
+      "11": {
+        "title": "Curiosity Cultivation",
+        "description": "Approach your current experience with genuine curiosity. What would you notice if you were encountering this moment for the first time?"
+      },
+      "12": {
+        "title": "Wisdom Reflection",
+        "description": "Think of someone you admire for their wisdom. What would they say about your current situation? Let their perspective guide you."
+      },
+      "13": {
+        "title": "Mental Reset",
+        "description": "Imagine pressing a gentle reset button in your mind. What thoughts would you choose to keep? What would you let go?"
+      },
+      "14": {
+        "title": "Awareness Check",
+        "description": "Notice where your attention has been dwelling. Gently guide it back to this present moment, like a kind shepherd with wandering sheep."
+      },
+      "15": {
+        "title": "Inner Dialogue",
+        "description": "Listen to the tone of your inner voice. Is it kind, critical, or neutral? Practice speaking to yourself as you would a dear friend."
+      },
+      "16": {
+        "title": "Mindful Priorities",
+        "description": "Ask yourself: 'What truly matters most right now?' Let this question guide your attention and energy for the next few minutes."
+      },
+      "17": {
+        "title": "Thought Patterns",
+        "description": "Notice any recurring thoughts or mental loops. Acknowledge them with kindness, then gently redirect your attention to your breath."
+      },
+      "18": {
+        "title": "Present Focus",
+        "description": "Count five things you can see, four you can hear, three you can touch, two you can smell, and one you can taste."
+      },
+      "19": {
+        "title": "Mental Flexibility",
+        "description": "Consider a belief you hold strongly. Can you imagine how someone might see it differently? Practice holding multiple perspectives gently."
+      },
+      "20": {
+        "title": "Conscious Choice",
+        "description": "Pause before your next action and ask: 'Am I choosing this consciously, or am I on autopilot?' Make your next move deliberately."
+      },
+      "21": {
+        "title": "Inner Stillness",
+        "description": "Find the quiet space between your thoughts. Rest there for a moment, like sitting by a peaceful lake at dawn."
+      },
+      "22": {
+        "title": "Mindful Analysis",
+        "description": "If you're facing a decision, ask: 'What would love do?' Let this question illuminate your path forward."
+      },
+      "23": {
+        "title": "Mental Inventory",
+        "description": "Take stock of your mental state. Are you carrying any unnecessary worries? Set them down gently, like putting down heavy bags."
+      },
+      "24": {
+        "title": "Awareness Expansion",
+        "description": "Expand your awareness beyond your immediate concerns. Feel yourself as part of the larger web of life around you."
+      },
+      "25": {
+        "title": "Thought Compassion",
+        "description": "Notice any self-critical thoughts. Respond to them with the same kindness you'd show a child who made a mistake."
+      },
+      "26": {
+        "title": "Mental Clarity",
+        "description": "Ask yourself: 'What is the most important thing I need to remember right now?' Let the answer arise from your deepest knowing."
+      },
+      "27": {
+        "title": "Perspective Practice",
+        "description": "Imagine viewing your current situation from high above, like from an airplane. How does this broader perspective change your understanding?"
+      },
+      "28": {
+        "title": "Mindful Reflection",
+        "description": "Think of one thing you're grateful for that you usually take for granted. Let appreciation fill your awareness."
+      },
+      "29": {
+        "title": "Inner Guidance",
+        "description": "Place your hand on your heart and ask: 'What does my heart want me to know?' Listen with gentle attention."
+      },
+      "30": {
+        "title": "Mental Freedom",
+        "description": "Notice any mental constraints you've placed on yourself. What would be possible if you released just one of them?"
+      },
+      "31": {
+        "title": "Conscious Awareness",
+        "description": "Become aware that you are aware. Notice the consciousness that notices your thoughts, feelings, and sensations."
+      },
+      "32": {
+        "title": "Wisdom Integration",
+        "description": "Recall a recent lesson you learned. How can you apply this wisdom to your current moment or situation?"
+      },
+      "33": {
+        "title": "Mental Spaciousness",
+        "description": "Create space between you and your thoughts. You are not your thoughts; you are the awareness that observes them."
+      },
+      "34": {
+        "title": "Gratitude Walk",
+        "description": "Take a 5-minute walk and notice three things you're grateful for. It could be the warmth of sunlight, a bird's song, or simply your ability to move."
+      },
+      "35": {
+        "title": "Mindful Eating",
+        "description": "Choose one bite of food. Notice its color, texture, smell, and taste. Chew slowly and appreciate the nourishment it provides your body."
+      },
+      "36": {
+        "title": "Mindful Listening",
+        "description": "Sit quietly for 2 minutes and listen to all the sounds around you. Don't label them, just let them wash over you like waves of awareness."
+      },
+      "37": {
+        "title": "Mindful Movement",
+        "description": "Stand up and stretch your arms overhead. Move your body slowly and deliberately, appreciating its strength and flexibility."
+      },
+      "38": {
+        "title": "Breathing Exercise",
+        "description": "Practice 4-7-8 breathing: inhale for 4 counts, hold for 7, exhale for 8. Repeat three times to activate your relaxation response."
+      },
+      "39": {
+        "title": "Mindful Touch",
+        "description": "Find a textured object nearby. Close your eyes and explore it with your fingertips. Notice temperature, roughness, smoothness, and weight."
+      },
+      "40": {
+        "title": "Nature Connection",
+        "description": "Step outside or look out a window. Find one element of nature and observe it closely for two minutes without distraction."
+      },
+      "41": {
+        "title": "Mindful Drinking",
+        "description": "Take a sip of water or tea. Notice the temperature, taste, and sensation as it travels down your throat. Appreciate this simple nourishment."
+      },
+      "42": {
+        "title": "Gentle Stretching",
+        "description": "Slowly roll your shoulders, neck, and wrists. Pay attention to any areas of tension and breathe into them with kindness."
+      },
+      "43": {
+        "title": "Mindful Writing",
+        "description": "Write three sentences about your current experience without editing or judging. Let your thoughts flow freely onto paper."
+      },
+      "44": {
+        "title": "Sensory Grounding",
+        "description": "Name five things you can see, four you can touch, three you can hear, two you can smell, and one you can taste."
+      },
+      "45": {
+        "title": "Mindful Cleaning",
+        "description": "Choose one small cleaning task. Do it slowly and deliberately, focusing on the movements and sensations involved."
+      },
+      "46": {
+        "title": "Walking Meditation",
+        "description": "Take ten slow, deliberate steps. Feel your feet connecting with the ground and notice the rhythm of your movement."
+      },
+      "47": {
+        "title": "Mindful Observation",
+        "description": "Choose an object in your environment. Study it for two minutes as if you're seeing it for the first time. Notice every detail."
+      },
+      "48": {
+        "title": "Breathing Space",
+        "description": "Take three conscious breaths. With each exhale, let your shoulders drop and your jaw soften. Create space in your body."
+      },
+      "49": {
+        "title": "Mindful Posture",
+        "description": "Notice your current posture. Gently adjust to sit or stand taller, imagining a string pulling you up from the crown of your head."
+      },
+      "50": {
+        "title": "Hand Awareness",
+        "description": "Look at your hands for one minute. Notice their lines, texture, and capability. Appreciate all they help you accomplish each day."
+      },
+      "51": {
+        "title": "Mindful Transition",
+        "description": "Before moving to your next activity, pause for three breaths. Set an intention for how you want to approach what comes next."
+      },
+      "52": {
+        "title": "Sound Meditation",
+        "description": "Make a gentle humming sound for 30 seconds. Feel the vibration in your chest and throat. Notice how sound affects your body."
+      },
+      "53": {
+        "title": "Mindful Organizing",
+        "description": "Organize one small area mindfully. Handle each item with attention, deciding consciously what to keep, move, or release."
+      },
+      "54": {
+        "title": "Conscious Breathing",
+        "description": "Place one hand on your chest, one on your belly. Breathe so that only the bottom hand moves. Practice for five breaths."
+      },
+      "55": {
+        "title": "Mindful Technology",
+        "description": "Before checking your phone or computer, pause and set an intention. Use technology consciously rather than automatically."
+      },
+      "56": {
+        "title": "Body Appreciation",
+        "description": "Thank three parts of your body for their service today. Place your hand on each area and offer genuine gratitude."
+      },
+      "57": {
+        "title": "Mindful Creativity",
+        "description": "Draw, doodle, or create something for five minutes without any goal. Let your hands move freely and enjoy the process."
+      },
+      "58": {
+        "title": "Conscious Hydration",
+        "description": "Drink a full glass of water slowly. Notice your body's response and appreciate this essential act of self-care."
+      },
+      "59": {
+        "title": "Mindful Communication",
+        "description": "In your next conversation, listen with full attention. Notice the urge to interrupt or plan your response, then return to listening."
+      },
+      "60": {
+        "title": "Energy Check",
+        "description": "Stand up and shake out your hands, arms, and whole body for 30 seconds. Notice how this changes your energy and alertness."
+      },
+      "61": {
+        "title": "Mindful Routine",
+        "description": "Choose one daily routine (brushing teeth, washing hands) and do it with complete attention. Notice every sensation and movement."
+      },
+      "62": {
+        "title": "Conscious Rest",
+        "description": "Lie down for two minutes and consciously relax each part of your body, starting from your toes and moving up to your head."
+      },
+      "63": {
+        "title": "Mindful Giving",
+        "description": "Do one small act of kindness for someone else, whether it's a smile, holding a door, or sending an encouraging message."
+      },
+      "64": {
+        "title": "Breathing Rhythm",
+        "description": "Match your breathing to a natural rhythm around you - waves, wind in trees, or your own heartbeat. Sync with life's natural flow."
+      },
+      "65": {
+        "title": "Mindful Preparation",
+        "description": "Before starting any task, take three breaths and set a clear intention. Approach your work with presence and purpose."
+      },
+      "66": {
+        "title": "Sensory Appreciation",
+        "description": "Choose one sense and focus on it for two minutes. If it's sight, really see. If it's hearing, truly listen. Deepen your sensory awareness."
+      },
+      "67": {
+        "title": "Mindful Completion",
+        "description": "When finishing any task, pause and acknowledge what you've accomplished. Take a moment to appreciate your effort and dedication."
+      },
+      "68": {
+        "title": "Body Scan",
+        "description": "Close your eyes and slowly scan your body from head to toe. Notice any tension or sensations without judgment. Simply observe and breathe."
+      },
+      "69": {
+        "title": "Loving Kindness",
+        "description": "Send kind thoughts to yourself: 'May I be happy, may I be peaceful, may I be free from suffering.' Then extend these wishes to someone you love."
+      },
+      "70": {
+        "title": "Heart Connection",
+        "description": "Place your hand on your heart. Feel its steady rhythm. Take a moment to appreciate this organ that works tirelessly to keep you alive."
+      },
+      "71": {
+        "title": "Emotional Check-in",
+        "description": "Place both hands on your chest. What emotions are present right now? Welcome them with compassion, knowing all feelings are temporary visitors."
+      },
+      "72": {
+        "title": "Self-Compassion",
+        "description": "Speak to yourself as you would to a beloved friend facing the same situation. Offer yourself the same kindness and understanding."
+      },
+      "73": {
+        "title": "Emotional Acceptance",
+        "description": "Notice any difficult emotions present. Instead of pushing them away, breathe with them. Say 'I see you' to whatever you're feeling."
+      },
+      "74": {
+        "title": "Gratitude Feeling",
+        "description": "Think of someone who has positively impacted your life. Let the feeling of gratitude fill your heart and radiate through your body."
+      },
+      "75": {
+        "title": "Inner Peace",
+        "description": "Find a place of calm within yourself, even if chaos surrounds you. Rest in this inner sanctuary for a few moments."
+      },
+      "76": {
+        "title": "Emotional Waves",
+        "description": "Notice that emotions rise and fall like waves. You don't have to be swept away; you can observe them from the shore of awareness."
+      },
+      "77": {
+        "title": "Heart Opening",
+        "description": "Imagine your heart expanding with each breath. Feel it growing more spacious, able to hold both joy and sorrow with equal grace."
+      },
+      "78": {
+        "title": "Comfort Zone",
+        "description": "Wrap your arms around yourself in a gentle hug. Offer yourself the comfort and security you need in this moment."
+      },
+      "79": {
+        "title": "Emotional Wisdom",
+        "description": "Ask your current emotion: 'What are you trying to tell me?' Listen with curiosity rather than resistance to its message."
+      },
+      "80": {
+        "title": "Joy Recognition",
+        "description": "Recall a moment of simple joy from today, however small. Let that feeling expand and fill your awareness completely."
+      },
+      "81": {
+        "title": "Vulnerability Strength",
+        "description": "Acknowledge something you're feeling vulnerable about. Recognize that vulnerability is not weakness, but courage to be authentic."
+      },
+      "82": {
+        "title": "Emotional Balance",
+        "description": "Notice if you're leaning too heavily into any one emotion. Gently invite balance, like adjusting your posture when sitting."
+      },
+      "83": {
+        "title": "Inner Child",
+        "description": "Connect with the playful, curious part of yourself. What does your inner child need to feel safe and loved right now?"
+      },
+      "84": {
+        "title": "Forgiveness Practice",
+        "description": "Think of a small mistake you made recently. Offer yourself forgiveness with the same grace you'd give a good friend."
+      },
+      "85": {
+        "title": "Emotional Courage",
+        "description": "Acknowledge your courage in facing whatever challenges you're currently experiencing. You are braver than you know."
+      },
+      "86": {
+        "title": "Love Expansion",
+        "description": "Think of someone you love deeply. Let that feeling of love expand to include yourself, then gradually extend it to others around you."
+      },
+      "87": {
+        "title": "Emotional Release",
+        "description": "If you're holding onto any tension or difficult emotions, imagine breathing them out with each exhale. Let them go with kindness."
+      },
+      "88": {
+        "title": "Inner Strength",
+        "description": "Connect with your inner resilience. Remember a time you overcame difficulty. Feel that same strength available to you now."
+      },
+      "89": {
+        "title": "Emotional Honesty",
+        "description": "Be completely honest with yourself about how you're feeling right now. There's no need to fix or change anything, just acknowledge."
+      },
+      "90": {
+        "title": "Compassionate Presence",
+        "description": "Imagine sitting with a dear friend who is experiencing exactly what you're experiencing. What compassion would you offer them?"
+      },
+      "91": {
+        "title": "Emotional Freedom",
+        "description": "Notice any emotions you've been trying to control or suppress. What would it feel like to let them exist without resistance?"
+      },
+      "92": {
+        "title": "Heart Gratitude",
+        "description": "Place your hand on your heart and feel grateful for its constant, faithful beating. Let appreciation flow through your entire being."
+      },
+      "93": {
+        "title": "Emotional Gentleness",
+        "description": "Treat your current emotional state with the same gentleness you'd show a wounded animal. Offer yourself tender care."
+      },
+      "94": {
+        "title": "Inner Warmth",
+        "description": "Generate a feeling of warmth in your chest, like sitting by a cozy fire. Let this warmth spread throughout your body."
+      },
+      "95": {
+        "title": "Emotional Trust",
+        "description": "Trust that whatever you're feeling right now is valid and temporary. You have the capacity to hold all of your experiences."
+      },
+      "96": {
+        "title": "Love Receiving",
+        "description": "Imagine receiving unconditional love from the universe, nature, or a higher power. Let yourself be held in this loving embrace."
+      },
+      "97": {
+        "title": "Emotional Integration",
+        "description": "Notice how different emotions can coexist within you. You can feel sad and grateful, anxious and hopeful, all at once."
+      },
+      "98": {
+        "title": "Heart Wisdom",
+        "description": "Ask your heart: 'What do I most need to feel right now?' Listen with openness to whatever response arises."
+      },
+      "99": {
+        "title": "Emotional Sanctuary",
+        "description": "Create an inner sanctuary where all your emotions are welcome. This is a safe space within you that nothing can disturb."
+      },
+      "100": {
+        "title": "Infinite Love",
+        "description": "Connect with the infinite capacity for love within your heart. Feel it as an inexhaustible source of warmth and compassion."
+      }
+    }
+  }
+}
