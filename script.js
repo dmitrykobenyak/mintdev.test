@@ -140,7 +140,8 @@ class MindfulnessCards {
                 id: 23,
                 title: "Mental Inventory",
                 category: "Think",
-                description: "Take stock of your mental state. Are you carrying any unnecessary worries? Set them down gently, like putting down heavy bags."
+                description: "Take stock of your mental state. Are you carrying any unnecessary worries? Set them down gently, like putting down heavy bags.",
+                image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=200&fit=crop"
             },
             {
                 id: 24,
@@ -652,6 +653,8 @@ class MindfulnessCards {
         this.cardTitle = document.getElementById('cardTitle');
         this.cardCategory = document.getElementById('cardCategory');
         this.cardDescription = document.getElementById('cardDescription');
+        this.cardImageContainer = document.getElementById('cardImageContainer');
+        this.cardImage = document.getElementById('cardImage');
         this.favoriteBtn = document.getElementById('favoriteBtn');
         this.randomBtn = document.getElementById('randomBtn');
         this.prevBtn = document.getElementById('prevBtn');
@@ -759,6 +762,15 @@ class MindfulnessCards {
         
         this.cardTitle.textContent = cardTitle !== `cards.content.${card.id}.title` ? cardTitle : card.title;
         this.cardDescription.textContent = cardDescription !== `cards.content.${card.id}.description` ? cardDescription : card.description;
+        
+        // Update card image if available
+        if (card.image) {
+            this.cardImage.src = card.image;
+            this.cardImage.alt = card.title;
+            this.cardImageContainer.style.display = 'block';
+        } else {
+            this.cardImageContainer.style.display = 'none';
+        }
         
         // Update category with translation
         const categoryTranslation = window.t(`cards.categories.${card.category}`);

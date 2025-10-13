@@ -5,6 +5,7 @@ A mindful awareness cards app with internationalization support for English and 
 ## Features
 
 - 100 unique mindfulness cards across three categories (Think, Do, Feel)
+- **Image support for cards** - Cards can now include optional images
 - Swipe navigation between cards
 - Random card selection
 - Favorites system with local storage
@@ -12,6 +13,36 @@ A mindful awareness cards app with internationalization support for English and 
 - Language switching between English and Russian
 - Proper plural forms and formatting for Russian
 - Settings modal for language preferences
+
+## Card Images
+
+Cards can now include optional images to enhance the mindfulness experience. 
+
+### Adding Images to Cards
+
+To add an image to a card, simply include an `image` property in the card object:
+
+```javascript
+{
+    id: 23,
+    title: "Mental Inventory",
+    category: "Think",
+    description: "Take stock of your mental state...",
+    image: "https://example.com/image.jpg"  // Optional image URL
+}
+```
+
+### Image Display
+
+- Images are displayed at the top of the card
+- Automatically hidden if no image is provided
+- Responsive design with max-height constraint
+- Rounded corners and subtle shadow for visual appeal
+- Alt text automatically set to card title for accessibility
+
+### Example
+
+Card #23 ("Mental Inventory") now includes a sample image demonstrating this feature.
 
 ## i18n Implementation
 
