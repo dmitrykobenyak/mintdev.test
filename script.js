@@ -666,6 +666,19 @@ class MindfulnessCards {
         this.settingsModal = document.getElementById('settingsModal');
         this.closeSettingsBtn = document.getElementById('closeSettingsBtn');
         this.languageSelect = document.getElementById('languageSelect');
+        
+        // Debug elements
+        this.debugModeToggle = document.getElementById('debugModeToggle');
+        this.debugPanel = document.getElementById('debugPanel');
+        this.debugCardId = document.getElementById('debugCardId');
+        this.debugCurrentIndex = document.getElementById('debugCurrentIndex');
+        this.debugTotalCards = document.getElementById('debugTotalCards');
+        this.debugCategory = document.getElementById('debugCategory');
+        this.debugLanguage = document.getElementById('debugLanguage');
+        this.debugFavoritesCount = document.getElementById('debugFavoritesCount');
+        
+        // Load debug mode preference
+        this.debugMode = this.loadDebugMode();
 
         // Add event listeners
         this.addEventListeners();
@@ -717,6 +730,18 @@ class MindfulnessCards {
         
         // Set current language in select
         this.languageSelect.value = window.i18n.getCurrentLanguage();
+        
+        // Debug mode toggle
+        this.debugModeToggle.addEventListener('change', (e) => {
+            this.toggleDebugMode(e.target.checked);
+        });
+        
+        // Set initial debug mode state
+        this.debugModeToggle.checked = this.debugMode;
+        if (this.debugMode) {
+            this.debugPanel.style.display = 'block';
+            this.updateDebugInfo();
+        }
     }
 
     filterByCategory(category) {
@@ -777,6 +802,11 @@ class MindfulnessCards {
         setTimeout(() => {
             this.currentCard.classList.add('fade-in');
         }, 50);
+        
+        // Update debug info if debug mode is enabled
+        if (this.debugMode) {
+            this.updateDebugInfo();
+        }
     }
 
     updateNavigation() {
@@ -981,6 +1011,50 @@ class MindfulnessCards {
             localStorage.setItem('mindfulness-favorites', JSON.stringify(this.favorites));
         } catch (error) {
             console.error('Error saving favorites:', error);
+        }
+    }
+
+    // Debug Mode methods
+    toggleDebugMode(enabled) {
+        this.debugMode = enabled;
+        this.saveDebugMode(enabled);
+        
+        if (enabled) {
+            this.debugPanel.style.display = 'block';
+            this.updateDebugInfo();
+        } else {
+            this.debugPanel.style.display = 'none';
+        }
+    }
+
+    updateDebugInfo() {
+        if (!this.debugMode || this.filteredCards.length === 0) return;
+        
+        const currentCard = this.filteredCards[this.currentIndex];
+        
+        this.debugCardId.textContent = currentCard ? currentCard.id : '-';
+        this.debugCurrentIndex.textContent = this.currentIndex + 1;
+        this.debugTotalCards.textContent = this.filteredCards.length;
+        this.debugCategory.textContent = this.currentCategory;
+        this.debugLanguage.textContent = window.i18n.getCurrentLanguage();
+        this.debugFavoritesCount.textContent = this.favorites.length;
+    }
+
+    loadDebugMode() {
+        try {
+            const saved = localStorage.getItem('mindfulness-debug-mode');
+            return saved === 'true';
+        } catch (error) {
+            console.error('Error loading debug mode:', error);
+            return false;
+        }
+    }
+
+    saveDebugMode(enabled) {
+        try {
+            localStorage.setItem('mindfulness-debug-mode', enabled.toString());
+        } catch (error) {
+            console.error('Error saving debug mode:', error);
         }
     }
 }

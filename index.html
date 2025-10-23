@@ -70,6 +70,19 @@
             <h3 data-i18n="ui.emptyState.title">No cards found</h3>
             <p data-i18n="ui.emptyState.description">Try selecting a different category or add some favorites!</p>
         </div>
+
+        <!-- Debug Panel -->
+        <div class="debug-panel" id="debugPanel" style="display: none;">
+            <h4>🔧 Debug Information</h4>
+            <div class="debug-info">
+                <p><strong>Card ID:</strong> <span id="debugCardId">-</span></p>
+                <p><strong>Current Index:</strong> <span id="debugCurrentIndex">-</span></p>
+                <p><strong>Total Cards:</strong> <span id="debugTotalCards">-</span></p>
+                <p><strong>Category:</strong> <span id="debugCategory">-</span></p>
+                <p><strong>Language:</strong> <span id="debugLanguage">-</span></p>
+                <p><strong>Favorites Count:</strong> <span id="debugFavoritesCount">-</span></p>
+            </div>
+        </div>
     </div>
 
     <!-- Settings Modal -->
@@ -86,6 +99,12 @@
                         <option value="en">English</option>
                         <option value="ru">Русский</option>
                     </select>
+                </div>
+                <div class="setting-group">
+                    <label for="debugModeToggle">
+                        <input type="checkbox" id="debugModeToggle" class="debug-toggle">
+                        Debug Mode
+                    </label>
                 </div>
             </div>
         </div>
