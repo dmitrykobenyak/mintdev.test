@@ -4,7 +4,7 @@ A mindful awareness cards app with internationalization support for English and 
 
 ## Features
 
-- 100 unique mindfulness cards across three categories (Think, Do, Feel)
+- 200 unique mindfulness cards across three categories (Think, Do, Feel)
 - Swipe navigation between cards
 - Random card selection
 - Favorites system with local storage
@@ -66,7 +66,7 @@ The app uses a custom lightweight i18n library (`js/i18n.js`) with the following
         "title": "Mindful Breathing",
         "description": "Take five deep breaths. Focus on the sensation of air entering and leaving your body..."
       }
-      // ... 100 cards total
+      // ... 200 cards total
     }
   }
 }
@@ -81,7 +81,7 @@ The app uses a custom lightweight i18n library (`js/i18n.js`) with the following
 const title = window.t('app.title'); // "Mindfulness Cards" or "Карты Осознанности"
 
 // With parameters
-const counter = window.t('ui.currentIndex', { current: 1, total: 100 }); // "1 / 100" or "1 из 100"
+const counter = window.t('ui.currentIndex', { current: 1, total: 200 }); // "1 / 200" or "1 из 200"
 ```
 
 #### HTML Integration
@@ -170,7 +170,7 @@ The Russian translation includes:
 1. **HTML elements**: Use `data-i18n` attributes for static text
 2. **Dynamic content**: Update via JavaScript using `window.t()`
 3. **Settings UI**: Language selector in modal
-4. **Card content**: All 100 cards translated
+4. **Card content**: All 200 cards translated
 5. **Navigation**: All buttons and labels translated
 
 ## Browser Support
