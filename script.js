@@ -1,9 +1,9 @@
 // Mindfulness Cards App with i18n support
 class MindfulnessCards {
     constructor() {
-        // Expanded mindfulness cards data - 100 unique cards
+        // Expanded mindfulness cards data - 200 unique cards
         this.cards = [
-            // THINK CATEGORY (33 cards)
+            // THINK CATEGORY (67 cards)
             {
                 id: 1,
                 title: "Mindful Breathing",
@@ -202,411 +202,1011 @@ class MindfulnessCards {
                 category: "Think",
                 description: "Create space between you and your thoughts. You are not your thoughts; you are the awareness that observes them."
             },
-
-            // DO CATEGORY (34 cards)
             {
                 id: 34,
+                title: "Beginner's Mind",
+                category: "Think",
+                description: "Approach this moment as if you know nothing. What do you notice when you drop all assumptions and expectations?"
+            },
+            {
+                id: 35,
+                title: "Thought Detachment",
+                category: "Think",
+                description: "Practice watching your thoughts without identifying with them. You are the observer, not the observed."
+            },
+            {
+                id: 36,
+                title: "Mental Pause",
+                category: "Think",
+                description: "Before reacting to anything, take three conscious breaths. Notice how this pause creates space for wiser responses."
+            },
+            {
+                id: 37,
+                title: "Clarity Seeking",
+                category: "Think",
+                description: "If something feels confusing, ask: 'What am I not seeing clearly?' Wait patiently for insight to emerge."
+            },
+            {
+                id: 38,
+                title: "Mind-Body Connection",
+                category: "Think",
+                description: "Notice how your thoughts affect your body. Where do you feel stress, peace, or tension manifesting physically?"
+            },
+            {
+                id: 39,
+                title: "Assumption Questioning",
+                category: "Think",
+                description: "Identify one assumption you're making right now. Ask yourself: 'Is this absolutely true? How do I know?'"
+            },
+            {
+                id: 40,
+                title: "Present Anchoring",
+                category: "Think",
+                description: "Name three facts about your immediate environment. This anchors your mind in the present reality."
+            },
+            {
+                id: 41,
+                title: "Thought Gratitude",
+                category: "Think",
+                description: "Appreciate your mind's ability to think, reason, and imagine. Thank it for serving you, even when thoughts are challenging."
+            },
+            {
+                id: 42,
+                title: "Mental Boundaries",
+                category: "Think",
+                description: "Notice if you're taking on others' problems mentally. Practice distinguishing between your thoughts and others' concerns."
+            },
+            {
+                id: 43,
+                title: "Wisdom Questions",
+                category: "Think",
+                description: "Ask yourself: 'What would my 80-year-old self want me to know about this situation?' Listen for the answer."
+            },
+            {
+                id: 44,
+                title: "Thought Energy",
+                category: "Think",
+                description: "Notice which thoughts drain your energy and which ones uplift you. Choose to dwell on the uplifting ones."
+            },
+            {
+                id: 45,
+                title: "Mental Simplicity",
+                category: "Think",
+                description: "If your mind feels cluttered, ask: 'What's the simplest way to think about this?' Let complexity dissolve."
+            },
+            {
+                id: 46,
+                title: "Awareness Practice",
+                category: "Think",
+                description: "For one minute, simply be aware of being aware. Rest in pure consciousness without focusing on any particular object."
+            },
+            {
+                id: 47,
+                title: "Thought Patterns Recognition",
+                category: "Think",
+                description: "Identify your most common thought pattern today. Is it worry, planning, reminiscing, or something else?"
+            },
+            {
+                id: 48,
+                title: "Mental Nourishment",
+                category: "Think",
+                description: "What thoughts nourish your soul? Deliberately think about something that brings you genuine joy or peace."
+            },
+            {
+                id: 49,
+                title: "Perspective Zoom",
+                category: "Think",
+                description: "Zoom out from your current concern. In the context of your whole life, how significant is this really?"
+            },
+            {
+                id: 50,
+                title: "Inner Listening",
+                category: "Think",
+                description: "Stop all mental activity for a moment. Listen to the silence beneath your thoughts. What do you hear?"
+            },
+            {
+                id: 51,
+                title: "Thought Reframing",
+                category: "Think",
+                description: "Take a negative thought and reframe it neutrally or positively. Notice how this shift changes your emotional state."
+            },
+            {
+                id: 52,
+                title: "Mental Presence",
+                category: "Think",
+                description: "Ask yourself: 'Am I here now, or am I lost in thoughts about past or future?' Gently return to now."
+            },
+            {
+                id: 53,
+                title: "Wisdom Cultivation",
+                category: "Think",
+                description: "Reflect on a mistake you made. What wisdom did it teach you? How has it made you wiser?"
+            },
+            {
+                id: 54,
+                title: "Thought Observation Practice",
+                category: "Think",
+                description: "Set a timer for 2 minutes. Simply watch your thoughts arise and pass without engaging with them."
+            },
+            {
+                id: 55,
+                title: "Mental Clarity Check",
+                category: "Think",
+                description: "Rate your mental clarity right now from 1-10. What would help you move one point higher?"
+            },
+            {
+                id: 56,
+                title: "Conscious Thinking",
+                category: "Think",
+                description: "Choose one thought deliberately. Notice the difference between chosen thoughts and automatic ones."
+            },
+            {
+                id: 57,
+                title: "Mind Appreciation",
+                category: "Think",
+                description: "Marvel at your mind's incredible capacity to learn, adapt, and create. Appreciate this amazing gift."
+            },
+            {
+                id: 58,
+                title: "Thought Liberation",
+                category: "Think",
+                description: "Identify one limiting belief. Ask: 'What would I do if I didn't believe this?' Feel the freedom in that question."
+            },
+            {
+                id: 59,
+                title: "Mental Hygiene",
+                category: "Think",
+                description: "Just as you clean your body, clean your mind. Release any toxic thoughts with compassion and let them go."
+            },
+            {
+                id: 60,
+                title: "Awareness Depth",
+                category: "Think",
+                description: "Go deeper into your awareness. Behind your thoughts, behind your feelings, what is the essence of you?"
+            },
+            {
+                id: 61,
+                title: "Thought Intention",
+                category: "Think",
+                description: "Before thinking about a topic, set an intention: 'May my thoughts about this be wise, kind, and helpful.'"
+            },
+            {
+                id: 62,
+                title: "Mental Balance",
+                category: "Think",
+                description: "Notice if you're overthinking or underthinking. Find the middle way between analysis and intuition."
+            },
+            {
+                id: 63,
+                title: "Wisdom Seeking",
+                category: "Think",
+                description: "Ask yourself: 'What is life trying to teach me right now?' Be open to unexpected answers."
+            },
+            {
+                id: 64,
+                title: "Thought Awareness",
+                category: "Think",
+                description: "Notice the gap between thoughts. In that gap, there is peace. Rest there as long as you can."
+            },
+            {
+                id: 65,
+                title: "Mental Gratitude",
+                category: "Think",
+                description: "Think of three things your mind helped you accomplish today. Thank it for its service."
+            },
+            {
+                id: 66,
+                title: "Perspective Wisdom",
+                category: "Think",
+                description: "Consider how someone from a different culture or time period might view your situation. What can you learn?"
+            },
+            {
+                id: 67,
+                title: "Conscious Reflection",
+                category: "Think",
+                description: "Reflect on your day so far. What patterns do you notice in your thinking? What would you like to shift?"
+            },
+
+            // DO CATEGORY (67 cards)
+            {
+                id: 68,
                 title: "Gratitude Walk",
                 category: "Do",
                 description: "Take a 5-minute walk and notice three things you're grateful for. It could be the warmth of sunlight, a bird's song, or simply your ability to move."
             },
             {
-                id: 35,
+                id: 69,
                 title: "Mindful Eating",
                 category: "Do",
                 description: "Choose one bite of food. Notice its color, texture, smell, and taste. Chew slowly and appreciate the nourishment it provides your body."
             },
             {
-                id: 36,
+                id: 70,
                 title: "Mindful Listening",
                 category: "Do",
                 description: "Sit quietly for 2 minutes and listen to all the sounds around you. Don't label them, just let them wash over you like waves of awareness."
             },
             {
-                id: 37,
+                id: 71,
                 title: "Mindful Movement",
                 category: "Do",
                 description: "Stand up and stretch your arms overhead. Move your body slowly and deliberately, appreciating its strength and flexibility."
             },
             {
-                id: 38,
+                id: 72,
                 title: "Breathing Exercise",
                 category: "Do",
                 description: "Practice 4-7-8 breathing: inhale for 4 counts, hold for 7, exhale for 8. Repeat three times to activate your relaxation response."
             },
             {
-                id: 39,
+                id: 73,
                 title: "Mindful Touch",
                 category: "Do",
                 description: "Find a textured object nearby. Close your eyes and explore it with your fingertips. Notice temperature, roughness, smoothness, and weight."
             },
             {
-                id: 40,
+                id: 74,
                 title: "Nature Connection",
                 category: "Do",
                 description: "Step outside or look out a window. Find one element of nature and observe it closely for two minutes without distraction."
             },
             {
-                id: 41,
+                id: 75,
                 title: "Mindful Drinking",
                 category: "Do",
                 description: "Take a sip of water or tea. Notice the temperature, taste, and sensation as it travels down your throat. Appreciate this simple nourishment."
             },
             {
-                id: 42,
+                id: 76,
                 title: "Gentle Stretching",
                 category: "Do",
                 description: "Slowly roll your shoulders, neck, and wrists. Pay attention to any areas of tension and breathe into them with kindness."
             },
             {
-                id: 43,
+                id: 77,
                 title: "Mindful Writing",
                 category: "Do",
                 description: "Write three sentences about your current experience without editing or judging. Let your thoughts flow freely onto paper."
             },
             {
-                id: 44,
+                id: 78,
                 title: "Sensory Grounding",
                 category: "Do",
                 description: "Name five things you can see, four you can touch, three you can hear, two you can smell, and one you can taste."
             },
             {
-                id: 45,
+                id: 79,
                 title: "Mindful Cleaning",
                 category: "Do",
                 description: "Choose one small cleaning task. Do it slowly and deliberately, focusing on the movements and sensations involved."
             },
             {
-                id: 46,
+                id: 80,
                 title: "Walking Meditation",
                 category: "Do",
                 description: "Take ten slow, deliberate steps. Feel your feet connecting with the ground and notice the rhythm of your movement."
             },
             {
-                id: 47,
+                id: 81,
                 title: "Mindful Observation",
                 category: "Do",
                 description: "Choose an object in your environment. Study it for two minutes as if you're seeing it for the first time. Notice every detail."
             },
             {
-                id: 48,
+                id: 82,
                 title: "Breathing Space",
                 category: "Do",
                 description: "Take three conscious breaths. With each exhale, let your shoulders drop and your jaw soften. Create space in your body."
             },
             {
-                id: 49,
+                id: 83,
                 title: "Mindful Posture",
                 category: "Do",
                 description: "Notice your current posture. Gently adjust to sit or stand taller, imagining a string pulling you up from the crown of your head."
             },
             {
-                id: 50,
+                id: 84,
                 title: "Hand Awareness",
                 category: "Do",
                 description: "Look at your hands for one minute. Notice their lines, texture, and capability. Appreciate all they help you accomplish each day."
             },
             {
-                id: 51,
+                id: 85,
                 title: "Mindful Transition",
                 category: "Do",
                 description: "Before moving to your next activity, pause for three breaths. Set an intention for how you want to approach what comes next."
             },
             {
-                id: 52,
+                id: 86,
                 title: "Sound Meditation",
                 category: "Do",
                 description: "Make a gentle humming sound for 30 seconds. Feel the vibration in your chest and throat. Notice how sound affects your body."
             },
             {
-                id: 53,
+                id: 87,
                 title: "Mindful Organizing",
                 category: "Do",
                 description: "Organize one small area mindfully. Handle each item with attention, deciding consciously what to keep, move, or release."
             },
             {
-                id: 54,
+                id: 88,
                 title: "Conscious Breathing",
                 category: "Do",
                 description: "Place one hand on your chest, one on your belly. Breathe so that only the bottom hand moves. Practice for five breaths."
             },
             {
-                id: 55,
+                id: 89,
                 title: "Mindful Technology",
                 category: "Do",
                 description: "Before checking your phone or computer, pause and set an intention. Use technology consciously rather than automatically."
             },
             {
-                id: 56,
+                id: 90,
                 title: "Body Appreciation",
                 category: "Do",
                 description: "Thank three parts of your body for their service today. Place your hand on each area and offer genuine gratitude."
             },
             {
-                id: 57,
+                id: 91,
                 title: "Mindful Creativity",
                 category: "Do",
                 description: "Draw, doodle, or create something for five minutes without any goal. Let your hands move freely and enjoy the process."
             },
             {
-                id: 58,
+                id: 92,
                 title: "Conscious Hydration",
                 category: "Do",
                 description: "Drink a full glass of water slowly. Notice your body's response and appreciate this essential act of self-care."
             },
             {
-                id: 59,
+                id: 93,
                 title: "Mindful Communication",
                 category: "Do",
                 description: "In your next conversation, listen with full attention. Notice the urge to interrupt or plan your response, then return to listening."
             },
             {
-                id: 60,
+                id: 94,
                 title: "Energy Check",
                 category: "Do",
                 description: "Stand up and shake out your hands, arms, and whole body for 30 seconds. Notice how this changes your energy and alertness."
             },
             {
-                id: 61,
+                id: 95,
                 title: "Mindful Routine",
                 category: "Do",
                 description: "Choose one daily routine (brushing teeth, washing hands) and do it with complete attention. Notice every sensation and movement."
             },
             {
-                id: 62,
+                id: 96,
                 title: "Conscious Rest",
                 category: "Do",
                 description: "Lie down for two minutes and consciously relax each part of your body, starting from your toes and moving up to your head."
             },
             {
-                id: 63,
+                id: 97,
                 title: "Mindful Giving",
                 category: "Do",
                 description: "Do one small act of kindness for someone else, whether it's a smile, holding a door, or sending an encouraging message."
             },
             {
-                id: 64,
+                id: 98,
                 title: "Breathing Rhythm",
                 category: "Do",
                 description: "Match your breathing to a natural rhythm around you - waves, wind in trees, or your own heartbeat. Sync with life's natural flow."
             },
             {
-                id: 65,
+                id: 99,
                 title: "Mindful Preparation",
                 category: "Do",
                 description: "Before starting any task, take three breaths and set a clear intention. Approach your work with presence and purpose."
             },
             {
-                id: 66,
+                id: 100,
                 title: "Sensory Appreciation",
                 category: "Do",
                 description: "Choose one sense and focus on it for two minutes. If it's sight, really see. If it's hearing, truly listen. Deepen your sensory awareness."
             },
             {
-                id: 67,
+                id: 101,
                 title: "Mindful Completion",
                 category: "Do",
                 description: "When finishing any task, pause and acknowledge what you've accomplished. Take a moment to appreciate your effort and dedication."
             },
-
-            // FEEL CATEGORY (33 cards)
             {
-                id: 68,
+                id: 102,
+                title: "Barefoot Walking",
+                category: "Do",
+                description: "If safe, walk barefoot for a few minutes. Feel the texture of the ground beneath your feet. Connect with the earth."
+            },
+            {
+                id: 103,
+                title: "Mindful Smiling",
+                category: "Do",
+                description: "Smile gently for 30 seconds, even if you don't feel like it. Notice how this simple act affects your mood and body."
+            },
+            {
+                id: 104,
+                title: "Conscious Yawning",
+                category: "Do",
+                description: "Take a big, deliberate yawn. Stretch your jaw and feel the release. Yawning oxygenates your brain and releases tension."
+            },
+            {
+                id: 105,
+                title: "Mindful Doorway",
+                category: "Do",
+                description: "Each time you pass through a doorway today, take one conscious breath. Use doorways as mindfulness reminders."
+            },
+            {
+                id: 106,
+                title: "Hand Massage",
+                category: "Do",
+                description: "Massage one hand with the other for one minute. Press into the palm, stretch the fingers, and appreciate your hands' hard work."
+            },
+            {
+                id: 107,
+                title: "Mindful Waiting",
+                category: "Do",
+                description: "Next time you're waiting, instead of checking your phone, simply breathe and observe your surroundings with curiosity."
+            },
+            {
+                id: 108,
+                title: "Conscious Sighing",
+                category: "Do",
+                description: "Take three deep sighs, letting each exhale be audible and complete. Sighing is your body's natural stress release mechanism."
+            },
+            {
+                id: 109,
+                title: "Mindful Stairs",
+                category: "Do",
+                description: "If you encounter stairs, climb them mindfully. Feel each step, notice your breathing, and appreciate your body's ability to move."
+            },
+            {
+                id: 110,
+                title: "Eye Rest",
+                category: "Do",
+                description: "Close your eyes for one minute. Cup your palms over them gently. Give your eyes a break from screens and stimulation."
+            },
+            {
+                id: 111,
+                title: "Mindful Dressing",
+                category: "Do",
+                description: "When changing clothes, do it mindfully. Feel the fabric, notice the movements, and appreciate the protection clothing provides."
+            },
+            {
+                id: 112,
+                title: "Conscious Laughing",
+                category: "Do",
+                description: "Laugh out loud for 30 seconds, even if it feels forced at first. Laughter releases endorphins and shifts your energy."
+            },
+            {
+                id: 113,
+                title: "Mindful Photography",
+                category: "Do",
+                description: "Take a photo of something beautiful or interesting nearby. Really look at it before capturing it. See with fresh eyes."
+            },
+            {
+                id: 114,
+                title: "Breath Counting",
+                category: "Do",
+                description: "Count your breaths from 1 to 10, then start over. If you lose count, gently begin again. This trains attention."
+            },
+            {
+                id: 115,
+                title: "Mindful Gratitude Note",
+                category: "Do",
+                description: "Write a brief thank-you note to someone, even if you don't send it. Feel the gratitude as you write each word."
+            },
+            {
+                id: 116,
+                title: "Body Shaking",
+                category: "Do",
+                description: "Shake your entire body vigorously for 30 seconds. This releases stuck energy and brings you into the present moment."
+            },
+            {
+                id: 117,
+                title: "Mindful Aromatherapy",
+                category: "Do",
+                description: "Find something with a pleasant scent. Close your eyes and breathe it in deeply. Notice how scent affects your mood."
+            },
+            {
+                id: 118,
+                title: "Conscious Blinking",
+                category: "Do",
+                description: "Blink slowly and deliberately ten times. Notice the brief darkness and the refreshing of your vision with each blink."
+            },
+            {
+                id: 119,
+                title: "Mindful Humming",
+                category: "Do",
+                description: "Hum your favorite tune for one minute. Feel the vibration throughout your head and chest. Let the sound soothe you."
+            },
+            {
+                id: 120,
+                title: "Finger Tracing",
+                category: "Do",
+                description: "Trace the outline of your opposite hand with one finger. Move slowly and feel every contour. This calms the nervous system."
+            },
+            {
+                id: 121,
+                title: "Mindful Sunrise/Sunset",
+                category: "Do",
+                description: "If possible, watch the sunrise or sunset for a few minutes. Witness the changing light and colors with full attention."
+            },
+            {
+                id: 122,
+                title: "Conscious Clapping",
+                category: "Do",
+                description: "Clap your hands together slowly ten times. Feel the impact, hear the sound, and notice the tingling sensation afterward."
+            },
+            {
+                id: 123,
+                title: "Mindful Plant Care",
+                category: "Do",
+                description: "If you have a plant, tend to it mindfully. Water it, touch its leaves, and appreciate its living presence."
+            },
+            {
+                id: 124,
+                title: "Breath Visualization",
+                category: "Do",
+                description: "Visualize your breath as colored light entering and leaving your body. Choose a color that feels healing to you."
+            },
+            {
+                id: 125,
+                title: "Mindful Listening to Music",
+                category: "Do",
+                description: "Listen to one song with complete attention. Notice instruments, lyrics, rhythm, and how the music makes you feel."
+            },
+            {
+                id: 126,
+                title: "Conscious Toe Wiggling",
+                category: "Do",
+                description: "Wiggle your toes for 30 seconds. This brings awareness to your feet and grounds you in your body."
+            },
+            {
+                id: 127,
+                title: "Mindful Cloud Watching",
+                category: "Do",
+                description: "Look at the sky and watch clouds for two minutes. Notice their shapes, movement, and constant transformation."
+            },
+            {
+                id: 128,
+                title: "Gratitude Breathing",
+                category: "Do",
+                description: "With each inhale, think 'I am grateful.' With each exhale, think 'for this moment.' Repeat for one minute."
+            },
+            {
+                id: 129,
+                title: "Mindful Texture Hunt",
+                category: "Do",
+                description: "Find and touch five different textures around you. Really feel each one. Notice which textures you find most pleasant."
+            },
+            {
+                id: 130,
+                title: "Conscious Shoulder Drops",
+                category: "Do",
+                description: "Raise your shoulders to your ears, hold for 3 seconds, then drop them completely. Repeat three times."
+            },
+            {
+                id: 131,
+                title: "Mindful Bell Listening",
+                category: "Do",
+                description: "If you have a bell or singing bowl, ring it and listen until you can no longer hear the sound. Follow it completely."
+            },
+            {
+                id: 132,
+                title: "Loving Touch",
+                category: "Do",
+                description: "Place both hands over your heart. Feel the warmth and connection. Send yourself love through this gentle touch."
+            },
+            {
+                id: 133,
+                title: "Mindful Coloring",
+                category: "Do",
+                description: "Color or draw for five minutes. Focus on the movement of your hand and the colors you choose. Let creativity flow."
+            },
+            {
+                id: 134,
+                title: "Breath Holding",
+                category: "Do",
+                description: "After an exhale, hold your breath comfortably for a few seconds. Notice the stillness. Then breathe normally."
+            },
+
+            // FEEL CATEGORY (66 cards)
+            {
+                id: 135,
                 title: "Body Scan",
                 category: "Feel",
                 description: "Close your eyes and slowly scan your body from head to toe. Notice any tension or sensations without judgment. Simply observe and breathe."
             },
             {
-                id: 69,
+                id: 136,
                 title: "Loving Kindness",
                 category: "Feel",
                 description: "Send kind thoughts to yourself: 'May I be happy, may I be peaceful, may I be free from suffering.' Then extend these wishes to someone you love."
             },
             {
-                id: 70,
+                id: 137,
                 title: "Heart Connection",
                 category: "Feel",
                 description: "Place your hand on your heart. Feel its steady rhythm. Take a moment to appreciate this organ that works tirelessly to keep you alive."
             },
             {
-                id: 71,
+                id: 138,
                 title: "Emotional Check-in",
                 category: "Feel",
                 description: "Place both hands on your chest. What emotions are present right now? Welcome them with compassion, knowing all feelings are temporary visitors."
             },
             {
-                id: 72,
+                id: 139,
                 title: "Self-Compassion",
                 category: "Feel",
                 description: "Speak to yourself as you would to a beloved friend facing the same situation. Offer yourself the same kindness and understanding."
             },
             {
-                id: 73,
+                id: 140,
                 title: "Emotional Acceptance",
                 category: "Feel",
                 description: "Notice any difficult emotions present. Instead of pushing them away, breathe with them. Say 'I see you' to whatever you're feeling."
             },
             {
-                id: 74,
+                id: 141,
                 title: "Gratitude Feeling",
                 category: "Feel",
                 description: "Think of someone who has positively impacted your life. Let the feeling of gratitude fill your heart and radiate through your body."
             },
             {
-                id: 75,
+                id: 142,
                 title: "Inner Peace",
                 category: "Feel",
                 description: "Find a place of calm within yourself, even if chaos surrounds you. Rest in this inner sanctuary for a few moments."
             },
             {
-                id: 76,
+                id: 143,
                 title: "Emotional Waves",
                 category: "Feel",
                 description: "Notice that emotions rise and fall like waves. You don't have to be swept away; you can observe them from the shore of awareness."
             },
             {
-                id: 77,
+                id: 144,
                 title: "Heart Opening",
                 category: "Feel",
                 description: "Imagine your heart expanding with each breath. Feel it growing more spacious, able to hold both joy and sorrow with equal grace."
             },
             {
-                id: 78,
+                id: 145,
                 title: "Comfort Zone",
                 category: "Feel",
                 description: "Wrap your arms around yourself in a gentle hug. Offer yourself the comfort and security you need in this moment."
             },
             {
-                id: 79,
+                id: 146,
                 title: "Emotional Wisdom",
                 category: "Feel",
                 description: "Ask your current emotion: 'What are you trying to tell me?' Listen with curiosity rather than resistance to its message."
             },
             {
-                id: 80,
+                id: 147,
                 title: "Joy Recognition",
                 category: "Feel",
                 description: "Recall a moment of simple joy from today, however small. Let that feeling expand and fill your awareness completely."
             },
             {
-                id: 81,
+                id: 148,
                 title: "Vulnerability Strength",
                 category: "Feel",
                 description: "Acknowledge something you're feeling vulnerable about. Recognize that vulnerability is not weakness, but courage to be authentic."
             },
             {
-                id: 82,
+                id: 149,
                 title: "Emotional Balance",
                 category: "Feel",
                 description: "Notice if you're leaning too heavily into any one emotion. Gently invite balance, like adjusting your posture when sitting."
             },
             {
-                id: 83,
+                id: 150,
                 title: "Inner Child",
                 category: "Feel",
                 description: "Connect with the playful, curious part of yourself. What does your inner child need to feel safe and loved right now?"
             },
             {
-                id: 84,
+                id: 151,
                 title: "Forgiveness Practice",
                 category: "Feel",
                 description: "Think of a small mistake you made recently. Offer yourself forgiveness with the same grace you'd give a good friend."
             },
             {
-                id: 85,
+                id: 152,
                 title: "Emotional Courage",
                 category: "Feel",
                 description: "Acknowledge your courage in facing whatever challenges you're currently experiencing. You are braver than you know."
             },
             {
-                id: 86,
+                id: 153,
                 title: "Love Expansion",
                 category: "Feel",
                 description: "Think of someone you love deeply. Let that feeling of love expand to include yourself, then gradually extend it to others around you."
             },
             {
-                id: 87,
+                id: 154,
                 title: "Emotional Release",
                 category: "Feel",
                 description: "If you're holding onto any tension or difficult emotions, imagine breathing them out with each exhale. Let them go with kindness."
             },
             {
-                id: 88,
+                id: 155,
                 title: "Inner Strength",
                 category: "Feel",
                 description: "Connect with your inner resilience. Remember a time you overcame difficulty. Feel that same strength available to you now."
             },
             {
-                id: 89,
+                id: 156,
                 title: "Emotional Honesty",
                 category: "Feel",
                 description: "Be completely honest with yourself about how you're feeling right now. There's no need to fix or change anything, just acknowledge."
             },
             {
-                id: 90,
+                id: 157,
                 title: "Compassionate Presence",
                 category: "Feel",
                 description: "Imagine sitting with a dear friend who is experiencing exactly what you're experiencing. What compassion would you offer them?"
             },
             {
-                id: 91,
+                id: 158,
                 title: "Emotional Freedom",
                 category: "Feel",
                 description: "Notice any emotions you've been trying to control or suppress. What would it feel like to let them exist without resistance?"
             },
             {
-                id: 92,
+                id: 159,
                 title: "Heart Gratitude",
                 category: "Feel",
                 description: "Place your hand on your heart and feel grateful for its constant, faithful beating. Let appreciation flow through your entire being."
             },
             {
-                id: 93,
+                id: 160,
                 title: "Emotional Gentleness",
                 category: "Feel",
                 description: "Treat your current emotional state with the same gentleness you'd show a wounded animal. Offer yourself tender care."
             },
             {
-                id: 94,
+                id: 161,
                 title: "Inner Warmth",
                 category: "Feel",
                 description: "Generate a feeling of warmth in your chest, like sitting by a cozy fire. Let this warmth spread throughout your body."
             },
             {
-                id: 95,
+                id: 162,
                 title: "Emotional Trust",
                 category: "Feel",
                 description: "Trust that whatever you're feeling right now is valid and temporary. You have the capacity to hold all of your experiences."
             },
             {
-                id: 96,
+                id: 163,
                 title: "Love Receiving",
                 category: "Feel",
                 description: "Imagine receiving unconditional love from the universe, nature, or a higher power. Let yourself be held in this loving embrace."
             },
             {
-                id: 97,
+                id: 164,
                 title: "Emotional Integration",
                 category: "Feel",
                 description: "Notice how different emotions can coexist within you. You can feel sad and grateful, anxious and hopeful, all at once."
             },
             {
-                id: 98,
+                id: 165,
                 title: "Heart Wisdom",
                 category: "Feel",
                 description: "Ask your heart: 'What do I most need to feel right now?' Listen with openness to whatever response arises."
             },
             {
-                id: 99,
+                id: 166,
                 title: "Emotional Sanctuary",
                 category: "Feel",
                 description: "Create an inner sanctuary where all your emotions are welcome. This is a safe space within you that nothing can disturb."
             },
             {
-                id: 100,
+                id: 167,
                 title: "Infinite Love",
                 category: "Feel",
                 description: "Connect with the infinite capacity for love within your heart. Feel it as an inexhaustible source of warmth and compassion."
+            },
+            {
+                id: 168,
+                title: "Emotional Presence",
+                category: "Feel",
+                description: "Be fully present with whatever emotion is here now. Don't try to change it, just be with it like a caring companion."
+            },
+            {
+                id: 169,
+                title: "Heart Breathing",
+                category: "Feel",
+                description: "Imagine breathing in and out through your heart center. Feel your heart softening and opening with each breath."
+            },
+            {
+                id: 170,
+                title: "Emotional Resilience",
+                category: "Feel",
+                description: "Acknowledge all the emotions you've successfully navigated in your life. Feel proud of your emotional resilience."
+            },
+            {
+                id: 171,
+                title: "Self-Love Practice",
+                category: "Feel",
+                description: "Look at yourself in a mirror or imagine your face. Say 'I love you' to yourself. Mean it, even if it feels awkward."
+            },
+            {
+                id: 172,
+                title: "Emotional Softening",
+                category: "Feel",
+                description: "Notice any hardness or resistance in your emotional state. Breathe into it and let it soften, like ice melting in warm water."
+            },
+            {
+                id: 173,
+                title: "Heart Expansion",
+                category: "Feel",
+                description: "Feel your heart expanding beyond your body, touching everyone and everything around you with invisible threads of connection."
+            },
+            {
+                id: 174,
+                title: "Emotional Validation",
+                category: "Feel",
+                description: "Whatever you're feeling is valid. Say to yourself: 'It makes sense that I feel this way.' Validate your experience."
+            },
+            {
+                id: 175,
+                title: "Inner Joy",
+                category: "Feel",
+                description: "Find a spark of joy within you, no matter how small. Fan it gently with your attention and let it grow."
+            },
+            {
+                id: 176,
+                title: "Emotional Spaciousness",
+                category: "Feel",
+                description: "Create space around your emotions. They don't have to fill your entire being. You are larger than any feeling."
+            },
+            {
+                id: 177,
+                title: "Heart Healing",
+                category: "Feel",
+                description: "Place your hand on your heart and imagine healing light flowing into any emotional wounds. Let your heart heal."
+            },
+            {
+                id: 178,
+                title: "Emotional Curiosity",
+                category: "Feel",
+                description: "Approach your emotions with curiosity rather than judgment. What can they teach you about yourself and your needs?"
+            },
+            {
+                id: 179,
+                title: "Love Meditation",
+                category: "Feel",
+                description: "Sit quietly and repeat: 'I am loved, I am loving, I am love.' Feel the truth of these words in your heart."
+            },
+            {
+                id: 180,
+                title: "Emotional Grounding",
+                category: "Feel",
+                description: "If emotions feel overwhelming, place your feet firmly on the ground. Feel the earth supporting you through everything."
+            },
+            {
+                id: 181,
+                title: "Heart Appreciation",
+                category: "Feel",
+                description: "Appreciate your heart's capacity to feel deeply. This sensitivity is a gift, not a burden."
+            },
+            {
+                id: 182,
+                title: "Emotional Alchemy",
+                category: "Feel",
+                description: "Notice a difficult emotion. Can you find any gift or lesson hidden within it? Transform pain into wisdom."
+            },
+            {
+                id: 183,
+                title: "Inner Calm",
+                category: "Feel",
+                description: "Beneath all emotions, there is a place of deep calm. Sink into that calm like settling into a comfortable chair."
+            },
+            {
+                id: 184,
+                title: "Emotional Authenticity",
+                category: "Feel",
+                description: "Allow yourself to feel what you truly feel, not what you think you should feel. Honor your authentic emotional experience."
+            },
+            {
+                id: 185,
+                title: "Heart Coherence",
+                category: "Feel",
+                description: "Breathe slowly and evenly while focusing on your heart. Imagine breathing in and out through your heart center."
+            },
+            {
+                id: 186,
+                title: "Emotional Compassion",
+                category: "Feel",
+                description: "Offer compassion to yourself for any difficult emotions you're experiencing. You're doing the best you can."
+            },
+            {
+                id: 187,
+                title: "Love Overflow",
+                category: "Feel",
+                description: "Fill yourself so full of love that it overflows naturally to others. You can't pour from an empty cup."
+            },
+            {
+                id: 188,
+                title: "Emotional Awareness",
+                category: "Feel",
+                description: "Simply notice what you're feeling without naming it. Experience the raw sensation before the label."
+            },
+            {
+                id: 189,
+                title: "Heart Opening Practice",
+                category: "Feel",
+                description: "Gently arch your upper back and lift your chest. This physical heart opening can create emotional opening too."
+            },
+            {
+                id: 190,
+                title: "Emotional Patience",
+                category: "Feel",
+                description: "Be patient with your emotional process. Healing and growth happen in their own time, not on your schedule."
+            },
+            {
+                id: 191,
+                title: "Inner Light",
+                category: "Feel",
+                description: "Feel the light of awareness within you. This light illuminates all emotions without being affected by them."
+            },
+            {
+                id: 192,
+                title: "Emotional Kindness",
+                category: "Feel",
+                description: "Treat every emotion with kindness, even the uncomfortable ones. They're all messengers trying to help you."
+            },
+            {
+                id: 193,
+                title: "Heart Gratitude Practice",
+                category: "Feel",
+                description: "Think of three things your heart is grateful for. Feel the warmth of gratitude spreading through your chest."
+            },
+            {
+                id: 194,
+                title: "Emotional Wholeness",
+                category: "Feel",
+                description: "You are whole, regardless of what you're feeling. Emotions are experiences, not your identity."
+            },
+            {
+                id: 195,
+                title: "Love Affirmation",
+                category: "Feel",
+                description: "Repeat: 'I am worthy of love. I am deserving of compassion. I am enough.' Feel the truth of these words."
+            },
+            {
+                id: 196,
+                title: "Emotional Flow",
+                category: "Feel",
+                description: "Let your emotions flow like water. Don't dam them up or force them. Allow natural movement and release."
+            },
+            {
+                id: 197,
+                title: "Heart Peace",
+                category: "Feel",
+                description: "Find the peace that exists in your heart, beneath all the noise and activity. Rest in that peaceful center."
+            },
+            {
+                id: 198,
+                title: "Emotional Acceptance Practice",
+                category: "Feel",
+                description: "Say to yourself: 'I accept what I'm feeling right now.' Notice how acceptance creates space and ease."
+            },
+            {
+                id: 199,
+                title: "Unconditional Love",
+                category: "Feel",
+                description: "Feel unconditional love for yourself, exactly as you are in this moment. No conditions, no requirements, just love."
+            },
+            {
+                id: 200,
+                title: "Emotional Completion",
+                category: "Feel",
+                description: "Honor the full cycle of your emotions. What arises will also pass. Trust in the natural rhythm of feeling."
             }
         ];
 
