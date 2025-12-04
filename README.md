@@ -4,7 +4,7 @@ A mindful awareness cards app with internationalization support for English and 
 
 ## Features
 
-- 200 unique mindfulness cards across three categories (Think, Do, Feel)
+- 300 unique mindfulness cards across three categories (Think, Do, Feel)
 - Swipe navigation between cards
 - Random card selection
 - Favorites system with local storage
@@ -66,7 +66,7 @@ The app uses a custom lightweight i18n library (`js/i18n.js`) with the following
         "title": "Mindful Breathing",
         "description": "Take five deep breaths. Focus on the sensation of air entering and leaving your body..."
       }
-      // ... 200 cards total
+      // ... 300 cards total
     }
   }
 }

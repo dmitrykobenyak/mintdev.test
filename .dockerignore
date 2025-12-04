@@ -1,0 +1,5 @@
+.git
+.serena
+.DS_Store
+*.log
+npm-debug.log*
