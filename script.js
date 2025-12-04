@@ -2144,15 +2144,8 @@ class MindfulnessCards {
             const key = element.getAttribute('data-i18n');
             const translation = window.t(key);
             
-            // Debug logging
-            if (key === 'navigation.favorites') {
-                console.log(`Translating favorites: key="${key}", translation="${translation}", lang="${window.i18n.getCurrentLanguage()}"`);
-            }
-            
-            // Only update if translation is valid
-            if (translation && translation !== key) {
-                element.textContent = translation;
-            }
+            // Always update the text content with the translation
+            element.textContent = translation;
         });
         
         // Update card counter format
