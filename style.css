@@ -64,6 +64,7 @@ body {
 /* Category Navigation */
 .category-nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 25px;
     overflow-x: auto;
