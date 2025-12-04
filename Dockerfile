@@ -14,4 +14,4 @@ RUN npm install
 EXPOSE 3000
 
 # Start the application
-CMD ["npx", "http-server", ".", "-p", "3000", "--host", "0.0.0.0"]
+CMD npx http-server . -p 3000 --host 0.0.0.0
