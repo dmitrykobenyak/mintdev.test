@@ -1827,14 +1827,22 @@ class MindfulnessCards {
     async initializeI18n() {
         try {
             // Load the current language
-            await window.i18n.loadLanguage(window.i18n.getCurrentLanguage());
-            await window.i18n.setLanguage(window.i18n.getCurrentLanguage());
+            const currentLang = window.i18n.getCurrentLanguage();
+            await window.i18n.loadLanguage(currentLang);
+            await window.i18n.setLanguage(currentLang);
             
             // Initialize the app after i18n is ready
             this.init();
             
             // Listen for language changes
-            window.addEventListener('languageChanged', () => {
+            window.addEventListener('languageChanged', async (event) => {
+                // Ensure the new language is fully loaded
+                const newLang = event.detail.language;
+                if (!window.i18n.translations[newLang]) {
+                    await window.i18n.loadLanguage(newLang);
+                }
+                
+                // Update translations and display
                 this.updateTranslations();
                 this.updateDisplay();
             });
@@ -2149,11 +2157,20 @@ class MindfulnessCards {
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(element => {
             const key = element.getAttribute('data-i18n');
+            if (!key) return;
+            
             const translation = window.t(key);
             
-            // Update the element's text content
+            // Update the element's text content if translation is valid
             if (translation && translation !== key) {
+                // Preserve the element's visibility
+                const currentDisplay = window.getComputedStyle(element).display;
                 element.textContent = translation;
+                
+                // Ensure the element remains visible after text update
+                if (currentDisplay !== 'none' && element.style.display === 'none') {
+                    element.style.display = '';
+                }
             }
         });
         
