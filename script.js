@@ -2138,27 +2138,22 @@ class MindfulnessCards {
 
     // Translation methods
     updateTranslations() {
+        // Ensure translations are loaded for current language
+        const currentLang = window.i18n.getCurrentLanguage();
+        if (!window.i18n.translations[currentLang]) {
+            console.warn(`Translations not loaded for language: ${currentLang}`);
+            return;
+        }
+        
         // Update all elements with data-i18n attributes
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(element => {
             const key = element.getAttribute('data-i18n');
             const translation = window.t(key);
             
-            // Debug logging for favorites button
-            if (key === 'navigation.favorites') {
-                console.log('Favorites button translation:', {
-                    key,
-                    translation,
-                    currentLang: window.i18n.getCurrentLanguage(),
-                    element: element
-                });
-            }
-            
-            // Only update if translation is valid and different from the key
+            // Update the element's text content
             if (translation && translation !== key) {
                 element.textContent = translation;
-            } else {
-                console.warn(`Translation missing or invalid for key: ${key}`);
             }
         });
         
